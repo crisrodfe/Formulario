@@ -1,0 +1,139 @@
+<html>
+    <head>
+	    <meta charset="UTF-8">
+        <title> Empresa S.A. </title>
+        <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+        <link rel="stylesheet" href="css/index.css" type="text/css"/>
+        <link rel="stylesheet" href="fonts/glyphicons-halflings-regular.eot" type="text/css"/>
+       
+        <link href='https://fonts.googleapis.com/css?family=Cherry+Swash' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Della+Respira' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+	    <div class="container">
+	        <header>
+	            <h2>Empresa S.A</h2>
+	            <h3>Ficha del Empleado</h3>
+	            <div id="fecha"></div>
+	        </header>						
+	        <form class="form-horizontal" role="form" method="post" action="http://www.empresasa.es/fabrica/gestionFicha.php">	
+	            <div class="panel panel-default" id="datosPersonales">		
+	                <div class="panel-heading"><span class="glyphicon glyphicon-user"></span>Datos Personales</div>	
+	                <div class="panel-body">			                
+						<div class="form-group">	
+		                    <label class="col-sm-offset-1 col-xs-12 col-sm-1 control-label" for="txtNif">nif:</label>
+		                    <div class="col-xs-12 col-sm-4">
+		                    	<input class="form-control" type="text" name="nif" id="txtNif" maxlength="9" size="9" required pattern="^([0-9]{7,8})([TRWAGMYFPDXBNJZSQVHLCKET])$"/>
+		                    </div>
+		                </div>		
+		                <div class ="form-group">	
+		                    <label class="col-sm-offset-1 col-xs-12 col-sm-1 control-label" for="txtNombre">nombre:</label>
+		                    <div class="col-xs-12 col-sm-10">
+		                    	<input  class="form-control" type="text" name="nombre" id="txtNombre" maxlength="30" required pattern="[a-zA-z áéíóúñüÁÉÍÓÚÑÜ]+">
+		                    </div>
+		                </div>		                
+		                <div class ="form-group">	
+		                    <label class="col-sm-offset-1 col-xs-12 col-sm-1 control-label" for="txtApellidos">apellidos:</label>
+		                    <div class="col-xs-12 col-sm-10">
+		                    	<input  class="form-control" type="text" name="apellidos" id="txtApellidos" maxlength="50" required pattern="[a-zA-z áéíóúñüÁÉÍÓÚÑÜ]+">
+		                    </div>
+		                </div>		
+		                <div class ="form-group">	
+			                <label class="col-sm-offset-1 col-xs-12 col-sm-1 control-label" for="txtTlfn">tel&eacute;fono:</label>
+			                <div class = "col-sm-2">
+			                    <input class="form-control" type="text" name="telefono" id="txtTlfn" maxlength="9" pattern="[0-9]{9}">
+			                </div>    
+		               			
+			                <label class="col-sm-offset-1 col-sm-2 control-label fecha" for="fechaAlta">fecha de alta:</label>
+			                <div class="col-sm-3">
+			                    <input class="form-control fecha" type="text" name="fechaAlta" id="fechaAlta" required pattern="^(19|20)([0-9]{2})(\/)([1-9]|0[1-9]|1[012])(\/)([1-9]|0[1-9]|[12][0-9]|3[01])$">				        	</div>
+		                </div>		
+		                <div class ="form-group">	
+		                    <label class="col-sm-offset-1 col-xs-12 col-sm-1 control-label"  for="txtEmail">e-mail:</label>
+		                    <div class="col-xs-12 col-sm-10">
+		                    	<input  class="form-control" type="text" name="email" id="txtEmail" maxlength="200" size="50" pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$">
+		                    </div>	
+		                </div>		
+		                
+		                <div class ="form-group">	
+		                    <label class="control-label col-sm-offset-1 col-xs-2 col-sm-1">sexo:</label>
+							<div class="col-xs-9 col-sm-2">
+								<label>
+									<input type="radio" name="sexo" value="V" checked> V
+								</label>
+								<label>
+									<input type="radio" name="sexo" value="H"> H
+								</label>
+			                </div>			              		
+							
+							<div class="col-xs-12 col-sm-3">
+			                    <label class="checkbox-inline">
+								<input type="checkbox" id="casado" value="C"> <strong>casado</strong>
+								</label>
+							</div>
+	
+		                    <label class="control-label col-xs-12 col-sm-1" for="lstHijos">hijos:</label>
+		                    <div class="col-xs-12 col-sm-2">
+			                    <select class="form-control" name="Hijos" id="lstHijos">
+			                    </select>	
+		                    </div>    
+		                </div>	
+		                	
+		                <div class ="form-group">			
+		                    <label class="col-sm-offset-1 col-xs-12 col-sm-1 control-label" for="lstProvincias">provincia:</label>
+		                    <div class="col-xs-12 col-sm-10">
+		                    	<select  class="form-control" name="Provincia" id="lstProvincias">
+		                    	</select>
+		                    </div>	
+		                </div>		
+		                <div class ="form-group">			
+		                    <label class="col-sm-offset-1 col-xs-12 col-sm-1 control-label" for="lstLocalidades">localidad:</label>
+		                    <div class="col-xs-12 col-sm-10">
+		                    	<select class="form-control" name="Localidad" id="lstLocalidades">
+		                    	</select>
+		                    </div>	
+		                </div>		
+		                <div class ="form-group">			
+		                    <label class="col-sm-offset-1 col-xs-12 col-sm-1 control-label" for="intPostal">codigo postal:</label>
+		                    <div class="col-xs-12 col-sm-2">
+		                    	<input class="form-control" type="text" name="CodigoPostal" id="intPostal" maxlength="5" pattern="[0-9]{5}">		
+		                    </div>
+		                </div>							
+	                </div>
+	            </div>
+	
+	            <div class="panel panel-default" id="datosBancarios">	
+	                <div class="panel-heading"><span class="glyphicon glyphicon-eur"></span>  Datos Bancarios</div>
+	                <div class="panel-body">
+	                    <div class ="form-group">	
+	                        <label class="col-sm-offset-1 col-xs-12 col-sm-1 control-label" for="txtBanco">banco:</label>
+	                        <div class="col-xs-12 col-sm-10">
+	                            <input class="form-control" type="text" name="nombreBanco" id="txtBanco" maxlength="30">
+	                        </div>   
+	                    </div>
+	
+	                    <div class ="form-group">	
+	                        <label class="col-sm-offset-1 col-xs-12 col-sm-1 control-label" for="txtSucursal">sucursal:</label>
+	                        <div class="col-xs-12 col-sm-10">
+	                            <input class="form-control" type="text" name="nombreSucursal" id="txtSucursal" maxlength="30">
+	                        </div>   
+	                    </div>
+	
+	                    <div class ="form-group">	
+	                        <label class="col-sm-offset-1 col-xs-12 col-sm-1 control-label" for="intCuenta">cuenta:</label>
+	                        <div class="col-xs-12 col-sm-4">
+	                            <input class="form-control" type="text" name="numeroCuenta" id="intCuenta" maxlength="23" pattern="([0-9]{4})(-)([0-9]{4})(-)([0-9]{2})(-)([0-9]{10})">
+	                        </div>    
+	                    </div>			
+	                </div>
+	            </div>	
+	
+	            <div align="right">
+	                <input class="btn btn-default" type="submit" value="Enviar">
+	            </div>
+	        </form>	
+	    </div>
+        <script src="js/formularioJS.js"></script>
+        <script src="js/misFuncionesJS.js"></script>	
+    </body>
+</html>	
